@@ -162,3 +162,17 @@ footer {
     background: #16a085;
     transform: scale(1.05);
 }
+
+.profil-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    /* Coupe l’image sans la déformer */
+    border-radius: 50%;
+    /* Rend la photo ronde */
+    border: 4px solid #1abc9c;
+    /* Ajoute un contour vert */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Ombre stylée */
+}
