@@ -141,3 +141,24 @@ footer {
         padding: 10px 20px;
     }
 }
+
+#cv {
+    text-align: center;
+    margin: 50px 0;
+}
+
+#cv .btn {
+    display: inline-block;
+    background: #1abc9c;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+#cv .btn:hover {
+    background: #16a085;
+    transform: scale(1.05);
+}
