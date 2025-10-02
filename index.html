@@ -4,49 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfolio de Frederic Gikalex Kadjo, étudiant en informatique passionné par l'IA.">
-    <title>Portfolio - Federic Gikalex Kadjo</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Frédéric Kadjo - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .smooth {
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
 
-<body>
-    <!-- Header -->
-    <header>
-        <header>
-            <div class="container">
-                <img src="photo_profil2.png" alt="Photo de profil" class="profil-photo">
-                <h1>👋 Bonjour, je suis <span class="highlight">Gikalex Kadjo</span></h1>
-                <p>Étudiant en informatique | Futur developpeur IA</p>
-                <a href="#projects" class="btn">Voir mes projets</a>
-            </div>
-        </header>
-
-    </header>
-
+<body class="bg-gray-50 text-gray-800">
     <!-- Navigation -->
-    <nav>
-        <div class="container nav-container">
-            <a href="about.html">À propos</a>
-            <a href="projects.html">Projets</a>
-            <a href="contact.html">Contact</a>
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-blue-600">FK</div>
+                <div class="space-x-6">
+                    <a href="#" onclick="showPage('index')"
+                        class="nav-link text-gray-700 hover:text-blue-600 smooth">Accueil</a>
+                    <a href="#" onclick="showPage('about')" class="nav-link text-gray-700 hover:text-blue-600 smooth">À
+                        propos</a>
+                    <a href="#" onclick="showPage('projects')"
+                        class="nav-link text-gray-700 hover:text-blue-600 smooth">Projets</a>
+                    <a href="#" onclick="showPage('contact')"
+                        class="nav-link text-gray-700 hover:text-blue-600 smooth">Contact</a>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <!-- About -->
-    <section id="about">
-        <div class="container">
-            <h2>À propos de moi</h2>
-            <p>
-                Je suis étudiant en informatique .
-                J’aime apprendre, créer et partager des projets qui combinent technologie et créativité.
-            </p>
+    <!-- Page Index -->
+    <div id="index" class="page active">
+        <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-800 mb-6">
+                    Frédéric Gikalex <span class="text-blue-600">Kadjo</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-4">
+                    Étudiant en Informatique | Administration Système & Réseau
+                </p>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-8">
+                    Passionné par les technologies et l'innovation, je développe mes compétences en développement web et
+                    infrastructure système.
+                </p>
+                <div class="space-x-4">
+                    <button onclick="showPage('projects')"
+                        class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 smooth">
+                        Voir mes projets
+                    </button>
+                    <button onclick="showPage('contact')"
+                        class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white smooth">
+                        Me contacter
+                    </button>
+                </div>
+            </div>
         </div>
-    </section>
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Gikalex Kadjo - Portfolio personnel</p>
-    </footer>
+    </div>
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
 </body>
 
 </html>

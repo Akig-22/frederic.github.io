@@ -1,46 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Federic Gikalex Kadjo</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Frédéric Kadjo - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .smooth {
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
 
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <h1>👋 Bonjour, je suis <span class="highlight">Frederic Gikalex Kadjo</span></h1>
-            <p>Étudiant en deuxième d'informatique | Futur développeur IA | </p>
-            <a href="projects.html" class="btn">Voir mes projets</a>
-        </div>
-    </header>
-
+<body class="bg-gray-50 text-gray-800">
     <!-- Navigation -->
-    <nav>
-        <div class="container nav-container">
-            <a href="about.html">À propos</a>
-            <a href="projects.html">Projets</a>
-            <a href="contact.html">Contact</a>
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-blue-600">FK</div>
+                <div class="space-x-6">
+                    <a href="#" onclick="showPage('index')"
+                        class="nav-link text-gray-700 hover:text-blue-600 smooth">Accueil</a>
+                    <a href="#" onclick="showPage('about')" class="nav-link text-gray-700 hover:text-blue-600 smooth">À
+                        propos</a>
+                    <a href="#" onclick="showPage('projects')"
+                        class="nav-link text-gray-700 hover:text-blue-600 smooth">Projets</a>
+                    <a href="#" onclick="showPage('contact')"
+                        class="nav-link text-gray-700 hover:text-blue-600 smooth">Contact</a>
+                </div>
+            </div>
         </div>
     </nav>
+    <!-- Page Projects -->
+    <div id="projects" class="page">
+        <div class="min-h-screen bg-gray-50 pt-24 pb-12">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">Mes Projets & Expériences</h2>
 
-    <!-- About -->
-    <section id="about">
-        <div class="container">
-            <h2>À propos de moi</h2>
-            <p>
-                Je suis étudiant en informatique passionné par le développement web et l’intelligence artificielle.
-                J’aime apprendre, créer et partager des projets qui combinent technologie et créativité.
-            </p>
+                <div class="max-w-5xl mx-auto space-y-8">
+                    <!-- Stage -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl smooth">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-blue-600">Stage – Administration système & réseau
+                                </h3>
+                                <p class="text-gray-600">Semper Connect, Boussy st-Antoine</p>
+                            </div>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Mai-Juin 2025</span>
+                        </div>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• Maintenance d'un cluster Proxmox assurant la disponibilité des services critiques</li>
+                            <li>• Automatisation de sauvegardes sécurisées avec Bash et rdiff-backup, réduction de 40%
+                                du temps de gestion manuelle</li>
+                            <li>• Dépannage de réseaux (NGINX, proxy, VLAN, téléphonie IP) garantissant la continuité
+                                opérationnelle</li>
+                            <li>• Collaboration avec l'équipe technique et communication claire des procédures</li>
+                        </ul>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm">Proxmox</span>
+                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm">Bash</span>
+                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm">NGINX</span>
+                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm">VLAN</span>
+                        </div>
+                    </div>
+
+                    <!-- Projet Pharmanalytic -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl smooth">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-blue-600">Pharmanalytic – Développement web</h3>
+                                <p class="text-gray-600">Projet académique, EPSI Toulouse</p>
+                            </div>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Nov 2024-Jan
+                                2025</span>
+                        </div>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• Création d'un site vitrine en HTML/CSS, PHP et SQL pour améliorer la visibilité en
+                                ligne d'une PME</li>
+                            <li>• Présentation orale du projet devant jury académique, démonstration de capacités de
+                                communication claire et structurée</li>
+                        </ul>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm">HTML/CSS</span>
+                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm">PHP</span>
+                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm">SQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Assistant polyvalent -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl smooth">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-blue-600">Assistant polyvalent en centre de santé
+                                    rural</h3>
+                                <p class="text-gray-600">Dabakala, Côte d'Ivoire</p>
+                            </div>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Été 2023</span>
+                        </div>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• Collecte d'informations médicales auprès de patients (poids, taille, tension)</li>
+                            <li>• Accueil et orientation des patients, développement de compétences relationnelles</li>
+                            <li>• Tenue du registre médical avec rigueur et précision</li>
+                            <li>• Application stricte des normes d'hygiène et sécurité</li>
+                        </ul>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm">Gestion de données</span>
+                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded text-sm">Relation client</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Gikalex Kadjo - Portfolio personnel</p>
-    </footer>
+    </div>
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
 </body>
 
 </html>

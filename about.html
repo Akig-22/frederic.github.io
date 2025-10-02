@@ -1,59 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Federic Gikalex Kadjo</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Frédéric Kadjo - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .smooth {
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
 
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <h1>👋 Bonjour, je suis <span class="highlight">Frederic Gikalex Kadjo</span></h1>
-            <p>Étudiant en deuxième d'informatique | Futur développeur IA | </p>
-            <a href="projects.html" class="btn">Voir mes projets</a>
-        </div>
-    </header>
-
+<body class="bg-gray-50 text-gray-800">
     <!-- Navigation -->
-    <nav>
-        <div class="container nav-container">
-            <a href="about.html">À propos</a>
-            <a href="projects.html">Projets</a>
-            <a href="contact.html">Contact</a>
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-blue-600">FK</div>
+                <div class="space-x-6">
+                    <a href="#" onclick="showPage('index')"
+                        class="nav-link text-gray-700 hover:text-blue-600 smooth">Accueil</a>
+                    <a href="#" onclick="showPage('about')" class="nav-link text-gray-700 hover:text-blue-600 smooth">À
+                        propos</a>
+                    <a href="#" onclick="showPage('projects')"
+                        class="nav-link text-gray-700 hover:text-blue-600 smooth">Projets</a>
+                    <a href="#" onclick="showPage('contact')"
+                        class="nav-link text-gray-700 hover:text-blue-600 smooth">Contact</a>
+                </div>
+            </div>
         </div>
     </nav>
+    <!-- Page About -->
+    <div id="about" class="page">
+        <div class="min-h-screen bg-gray-50 pt-24 pb-12">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">À propos de moi</h2>
 
-    <!-- About -->
-    <section id="about">
-        <div class="container">
-            <h2>À propos de moi</h2>
-            <p>Hey, je suis Frédéric Gikalex Kadjo.
-                Je suis étudiant en informatique, passionné par la musique et il m’arrive souvent d’écrire mes propres
-                sons. J’aime aussi le dessin et tout ce qui me permet de donner vie à mon imagination.
-                Curieux et créatif, je trouve dans l’informatique un terrain idéal pour explorer, apprendre et
-                construire.
-                Mon objectif est de mettre à profit mon esprit créatif pour concevoir des projets qui allient
-                technologie, art et innovation.
-            </p>
+                <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8 mb-8">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Profil</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Jeune étudiant en deuxième année d'informatique à l'EPSI Toulouse. Dynamique et motivé, je suis
+                        à la recherche d'opportunités me permettant de mettre à profit mes compétences techniques et
+                        relationnelles, tout en développant mon expérience professionnelle. Rigoureux, à l'aise avec les
+                        outils informatiques et doté d'un bon sens du contact, je suis prêt à m'investir pleinement dans
+                        les missions qui me seront confiées.
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 mb-8">
+                    <!-- Formation -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-2xl font-semibold text-blue-600 mb-4">🎓 Formation</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">EPSI Toulouse – Balma</h4>
+                                <p class="text-sm text-gray-600">2ème année Informatique (SN2) — en cours</p>
+                                <p class="text-sm text-gray-600">1ère année Informatique (SN1) — 2024-2025</p>
+                                <p class="text-sm text-gray-600">Prépa Fastrack Informatique — Fév. 2024 - Mai 2024</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Lycée classique d'Abidjan</h4>
+                                <p class="text-sm text-gray-600">Baccalauréat scientifique Série D — 2022-2023</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Compétences -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-2xl font-semibold text-blue-600 mb-4">💻 Compétences</h3>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">Langages</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML/CSS</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">SQL</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Bash</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">PHP</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">Qualités</h4>
+                            <ul class="text-gray-700 text-sm space-y-1">
+                                <li>• Sérieux et rigoureux</li>
+                                <li>• Adaptabilité</li>
+                                <li>• Assertif</li>
+                                <li>• Autonome</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Centres d'intérêt -->
+                <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">🎯 Centres d'intérêt</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg">🎬 Anime</span>
+                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg">⚽ Football</span>
+                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg">🎤 Chant (artiste)</span>
+                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg">👨‍🍳 Cuisine</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
-    <section id="cv">
-        <div class="container">
-            <h2>Mon CV</h2>
-            <p>
-                Vous pouvez télécharger mon CV en cliquant sur le bouton ci-dessous :
-            </p>
-            <a href="cv_frederic_kadjo_porfolio.pdf" download class="btn">📄 Télécharger mon CV</a>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Gikalex Kadjo - Portfolio personnel</p>
-    </footer>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
 </body>
 
 </html>
